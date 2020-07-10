@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row justify-content-start">
+        <div class="col md-6">
+            <h1>Prediction Form</h1>
+            <h5 class="text-muted">team 1- {{ team1 }}</h5>
+            <h5 class="text-muted">team 2 - {{ team2 }}</h5>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.city_match.label(class="form-control-label") }}
+                    {{ form.city_match(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.t1_bat_avg.label(class="form-control-label") }}
+                    {{ form.t1_bat_avg(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.t1_bowl_avg.label(class="form-control-label") }}
+                    {{ form.t1_bowl_avg(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.t2_bat_avg.label(class="form-control-label") }}
+                    {{ form.t2_bat_avg(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.t2_bowl_avg.label(class="form-control-label") }}
+                    {{ form.t2_bowl_avg(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.toss_dec.label(class="form-control-label") }}
+                    {{ form.toss_dec(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.toss_win.label(class="form-control-label") }}
+                    {{ form.toss_win(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.venue.label(class="form-control-label") }}
+                    {{ form.venue(class="form-control") }}
+                </div>
+                <div class="form-group">
+                    {{ form.submit(class='btn btn-primary') }}
+                </div>
+            <form>
+        </div>
+    </div>
+<h1>{{predictions}}</h1>
+{% endblock %}
+
