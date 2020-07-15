@@ -10,11 +10,6 @@ dataset = dataset.drop(columns=['gender', 'match_type','date','umpire_1','umpire
 dataset['city'].fillna(dataset['city'].mode()[0], inplace=True)
 dataset.columns[dataset.isnull().any()]
 
-# dataset.replace(['Mumbai Indians','Kolkata Knight Riders','Royal Challengers Bangalore','Deccan Chargers','Chennai Super Kings',
-#                  'Rajasthan Royals','Delhi Daredevils','Gujarat Lions','Kings XI Punjab',
-#                  'Sunrisers Hyderabad','Rising Pune Supergiants','Kochi Tuskers Kerala','Pune Warriors','Rising Pune Supergiant']
-#                 ,['MI','KKR','RCB','DC','CSK','RR','DD','GL','KXIP','SRH','RPS','KTK','PW','RPS'],inplace=True)
-
 
 team_list=list(set(dataset['team 1'].unique()).union(set(dataset['team 2'].unique())))
 venue_list=dataset.venue.unique()
