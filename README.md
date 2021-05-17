@@ -11,4 +11,4 @@ To install dependencies
 
 go to  `localhost:8050` 
 
-ML stuff from https://github.com/saxenanihal95/CricketPrediction
+
